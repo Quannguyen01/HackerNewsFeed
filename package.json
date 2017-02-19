@@ -1,0 +1,21 @@
+{
+  "name": "hackernewsfetch",
+  "version": "0.0.1",
+  "description": "Fetch from Hacker news",
+  "main": "main.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js -p",
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-env": "^1.1.8",
+    "electron": "^1.4.15",
+    "webpack": "^2.2.1"
+  }
+}
