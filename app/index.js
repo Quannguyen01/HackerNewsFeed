@@ -13,6 +13,9 @@ function display(stories) {
         <a href="${story.url}">${story.title}</a> by ${story.by}
       </div>
     `;
+    // const content = `
+    //   <some-custom-element ${story.url} ${story.title} ${story.by}>
+    // `;
     list = list + content;
   });
 
@@ -32,11 +35,10 @@ function showStories() {
   board.innerHTML = "Loading...";
 
   fetchTopStories()
-  .then(storyIds =>
-    Promise.all(storyIds.map(storyId => fetchStory(storyId)))
-  )
   .then(data => {
-    display(data);
+    if (data.length > 0){
+        display(data);
+    }
   });
 }
 

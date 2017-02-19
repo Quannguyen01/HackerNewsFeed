@@ -4,6 +4,9 @@ export function fetchTopStories() {
   return fetch(`${base_url}/topstories.json`)
   .then(response => response.json())
   .then(json => json.slice(0,29))
+  .then(storyIds => {
+    return Promise.all(storyIds.map(storyId => fetchStory(id)));
+  })
   .catch(response => {
     console.log(response);
     return [];
