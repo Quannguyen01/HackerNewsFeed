@@ -1,7 +1,8 @@
-const {shell} = require('electron');
-const {fetchTopStories, fetchStory} = require('./HNHelpers.js')
+import {shell} from 'electron';
+import {fetchTopStories, fetchStory} from './HNHelpers.js';
 
-let board = document.querySelector("#board");
+const wrapper = document.querySelector(".wrapper");
+const board = wrapper.querySelector("#board");
 
 function display(stories) {
 

@@ -1,8 +1,6 @@
-const HNHelpers = {};
-
 const base_url = 'https://hacker-news.firebaseio.com/v0'
 
-HNHelpers.fetchTopStories = function(){
+export function fetchTopStories() {
   return fetch(`${base_url}/topstories.json`)
   .then(response => response.json())
   .then(json => json.slice(0,29))
@@ -12,7 +10,7 @@ HNHelpers.fetchTopStories = function(){
   });
 }
 
-HNHelpers.fetchStory = function(id){
+export function fetchStory(id) {
   return fetch(`${base_url}/item/${id}.json`)
   .then(response => response.json())
   .then(json => json)
@@ -21,5 +19,3 @@ HNHelpers.fetchStory = function(id){
     return null;
   });
 }
-
-module.exports = HNHelpers;

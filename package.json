@@ -4,7 +4,7 @@
   "description": "Fetch from Hacker news",
   "main": "main.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js -p",
+    "build": "webpack -p",
     "start": "electron ."
   },
   "author": "",
