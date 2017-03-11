@@ -4,7 +4,7 @@
   "description": "Fetch from Hacker news",
   "main": "main.js",
   "scripts": {
-    "build": "webpack -p",
+    "build": "webpack --config webpack.config.js",
     "start": "electron ."
   },
   "author": "",
@@ -15,7 +15,10 @@
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-preset-env": "^1.1.8",
+    "babel-preset-react": "^6.23.0",
     "electron": "^1.4.15",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
     "webpack": "^2.2.1"
   }
 }
