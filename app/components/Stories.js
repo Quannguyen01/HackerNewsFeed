@@ -10,18 +10,22 @@ class Stories extends Component {
   }
 
   render() {
-    const storyList = this.props.stories.map(story =>
-      <div className="story" key={story.id}>
-        <a href={story.url} onClick={this.openLink.bind(this, story)}>{story.title}</a> by {story.by}
-      </div>
-    );
+    const storyList = this.props.stories.length === 0
+      ? <div>Failed to fetch</div>
+      : this.props.stories.map(story =>
+            <li className="story mdl-list__item" key={story.id}>
+              <div className="mdl-list__item primary-content" onClick={this.openLink.bind(this, story)}>
+                <a>{story.title}</a> - {story.by}
+              </div>
+            </li>
+        );
 
     return (
       this.props.isLoading === true
-      ? <div className="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
-      : <div>
-        {storyList}
-      </div>
+      ? <div className="progress-bar mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+      : <ul className="mdl-list">
+          {storyList}
+        </ul>
     );
   }
 }
