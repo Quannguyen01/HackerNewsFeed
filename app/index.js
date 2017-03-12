@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App';
+import MainContainer from './containers/MainContainer';
 
 // import {shell} from 'electron';
 // import {fetchTopStories, fetchStory} from './HNHelpers.js';
@@ -51,6 +51,6 @@ import App from './App';
 
 
 ReactDOM.render(
-  <App/>,
+  <MainContainer/>,
   document.getElementById('app')
 )

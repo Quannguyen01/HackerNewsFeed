@@ -5,7 +5,7 @@ export function fetchTopStories() {
   .then(response => response.json())
   .then(json => json.slice(0,29))
   .then(storyIds => {
-    return Promise.all(storyIds.map(storyId => fetchStory(id)));
+    return Promise.all(storyIds.map(storyId => fetchStory(storyId)));
   })
   .catch(response => {
     console.log(response);
