@@ -1,0 +1,20 @@
+{
+  "name": "hackernewsfetch",
+  "description": "Fetch from Hacker news",
+  "main": "main.js",
+  "authors": [
+    "quannguyen01 <quannguyenhong.92@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Quannguyen01/HackerNewsFeed",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "material-design-lite": "^1.3.0"
+  }
+}

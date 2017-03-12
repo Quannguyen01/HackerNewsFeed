@@ -26,8 +26,10 @@ class MainContainer extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Hacker News</h1>
+      <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header className="header mdl-layout__header">
+          <span className="mdl-layout-title">Hacker News</span>
+        </header>
         <Stories
           isLoading={this.state.isLoading}
           stories={this.state.stories}/>

@@ -18,7 +18,7 @@ class Stories extends Component {
 
     return (
       this.props.isLoading === true
-      ? <div>Loading...</div>
+      ? <div className="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
       : <div>
         {storyList}
       </div>
