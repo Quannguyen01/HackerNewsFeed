@@ -6,3 +6,27 @@
 .progress-bar {
   width: 100%;
 }
+
+.story {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.story > .title {
+  padding-bottom: 3px;
+  font-size: 1em;
+}
+
+.story > .info {
+  font-size: 0.8em;
+}
+
+.mdl-list__item {
+  padding: 0;
+  border-bottom: 1px solid lightgrey;
+}
+
+.mdl-list {
+  margin: 0;
+}

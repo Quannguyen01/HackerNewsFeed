@@ -13,9 +13,14 @@ class Stories extends Component {
     const storyList = this.props.stories.length === 0
       ? <div>Failed to fetch</div>
       : this.props.stories.map(story =>
-            <li className="story mdl-list__item" key={story.id}>
-              <div className="mdl-list__item primary-content" onClick={this.openLink.bind(this, story)}>
-                <a>{story.title}</a> - {story.by}
+            <li className="mdl-list__item" key={story.id}>
+              <div className="mdl-list__item-primary-content">
+                <div className="story">
+                  <div className="title"><a href="#" onClick={this.openLink.bind(this, story)}>{story.title}</a></div>
+                  <div className="info mdl-color-text--grey-600">
+                    {story.score} points by {story.by} | {story.descendants} comments
+                  </div>
+                </div>
               </div>
             </li>
         );
