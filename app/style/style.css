@@ -1,5 +1,8 @@
+.header {
+  padding: 0 16px 0 16px;
+}
+
 .header span {
-  padding: 20px;
   font-weight: bold;
 }
 
