@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "start": "electron ."
+    "start": "electron .",
+    "lint": "eslint app/"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +18,8 @@
     "babel-preset-env": "^1.1.8",
     "babel-preset-react": "^6.23.0",
     "electron": "^1.4.15",
+    "eslint": "^3.17.1",
+    "eslint-plugin-react": "^6.10.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "webpack": "^2.2.1"
