@@ -1,10 +1,14 @@
 .header {
   padding: 0 16px 0 16px;
+  -webkit-app-region: drag;
 }
 
 .header span {
   font-weight: bold;
-  -webkit-app-region: drag;
+}
+
+.header > div.icons {
+  -webkit-app-region: no-drag;
 }
 
 .progress-bar {

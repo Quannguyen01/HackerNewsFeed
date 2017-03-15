@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { remote } from 'electron';
 
 import Stories from '../components/Stories';
 import NavigationFooter from '../components/NavigationFooter';
@@ -14,6 +15,10 @@ class MainContainer extends Component {
       stories: [],
       page: 0,
     }
+  }
+
+  closeApp() {
+    remote.getCurrentWindow().close();
   }
 
   fetch(page, event) {
@@ -52,8 +57,11 @@ class MainContainer extends Component {
             <div className="header mdl-layout__header-row">
               <span className="mdl-layout-title">Hacker News</span>
               <div className="mdl-layout-spacer"></div>
-              <div className="mdl-button mdl-js-button mdl-button--icon" onClick={this.fetch.bind(this, this.state.page)}>
+              <div className="icons mdl-button mdl-js-button mdl-button--icon" onClick={this.fetch.bind(this, this.state.page)}>
                 <i className="material-icons">refresh</i>
+              </div>
+              <div className="icons mdl-button mdl-js-button mdl-button--icon" onClick={this.closeApp}>
+                <i className="material-icons">close</i>
               </div>
             </div>
           </header>
