@@ -8,7 +8,6 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    frame: false,
   });
 
   mainWindow.loadURL(url.format({
@@ -20,6 +19,8 @@ function createWindow() {
   mainWindow.webContents.openDevTools({
     mode: 'detach',
   });
+
+  mainWindow.setMenu(null);
 
   mainWindow.on('closed', () => { mainWindow = null; });
 }

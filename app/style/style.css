@@ -4,6 +4,7 @@
 
 .header span {
   font-weight: bold;
+  -webkit-app-region: drag;
 }
 
 .progress-bar {
@@ -32,4 +33,9 @@
 
 .mdl-list {
   margin: 0;
+}
+
+.navigation-footer {
+  display: flex;
+  justify-content: space-between;
 }
